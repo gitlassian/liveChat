@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        span{
+            overflow-wrap: break-word;
+        }
+        #log{
+            overflow-y: scroll
+        }
+    </style>
+</head>
+<body class="w-[100vw] h-[100vh] flex justify-center content-center">
+    <div class="container text-xl">
+        <div type="text" id="log" class="bg-white mt-2 p-2 rounded-lg border w-[100%] h-[80vh]"></div>
+        <input class="bg-white rounded-lg border w-[100%] h-[10vh] mt-2 p-2 text-xl" type="text" name="message_input">
+        <input type="button" name="button" value="Send" class="bg-white rounded-lg border mt-2 p-2" >
+    </div>
+
+    <script src="{{ url_for('static',filename='scripts/chat.js') }}"></script>
+</body>
+</html>
